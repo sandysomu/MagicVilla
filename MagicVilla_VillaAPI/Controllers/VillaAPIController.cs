@@ -38,7 +38,7 @@ namespace MagicVilla_VillaAPI.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public ActionResult<VillaDTO> GetVilla(int id)
         {
-            _logger.LogInformation("Getting information about the Villa : " + id );
+            _logger.LogInformation("Getting information about the Villa : " + id);
             if (id == 0)
             {
                 _logger.LogError("Villa Error");
@@ -101,7 +101,7 @@ namespace MagicVilla_VillaAPI.Controllers
             if (villa == null) { return BadRequest("Villa not found"); }
 
             villa.Name = villaDTO.Name;
-            villa.Direction = villaDTO.Direction;
+            
 
             return Ok(villaDTO);
         }
